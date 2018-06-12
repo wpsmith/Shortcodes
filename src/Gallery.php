@@ -19,7 +19,7 @@
 
 namespace WPS\Shortcodes;
 
-use WPS;
+use WPS\Shortcodes\Shortcode;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -36,7 +36,7 @@ if ( ! class_exists( 'WPS\Shortcodes\Gallery' ) ) {
 	 * @package WPS\Core
 	 * @author  Travis Smith <t@wpsmith.net>
 	 */
-	class Gallery extends WPS\Core\Shortcode {
+	class Gallery extends Shortcode {
 		/**
 		 * Shortcode name.
 		 *

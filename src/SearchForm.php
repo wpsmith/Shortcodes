@@ -2,7 +2,7 @@
 
 namespace WPS\Shortcodes;
 
-use WPS\Core;
+use WPS\Shortcodes\Shortcode;
 
 if ( ! class_exists( '\WPS\Shortcodes\SearchForm' ) ) {
 	/**
@@ -10,7 +10,7 @@ if ( ! class_exists( '\WPS\Shortcodes\SearchForm' ) ) {
 	 *
 	 * @package WPS\Shortcodes
 	 */
-	class SearchForm extends Core\Shortcode {
+	class SearchForm extends Shortcode {
 
 		/**
 		 * Shortcode name.
