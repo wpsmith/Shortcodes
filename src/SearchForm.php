@@ -1,14 +1,14 @@
 <?php
 
-namespace WPS\Shortcodes;
+namespace WPS\WP\Shortcodes;
 
-use WPS\Shortcodes\Shortcode;
+use WPS\WP\Shortcodes\Shortcode;
 
-if ( ! class_exists( '\WPS\Shortcodes\SearchForm' ) ) {
+if ( ! class_exists( '\WPS\WP\Shortcodes\SearchForm' ) ) {
 	/**
 	 * Class SearchForm
 	 *
-	 * @package WPS\Shortcodes
+	 * @package WPS\WP\Shortcodes
 	 */
 	class SearchForm extends Shortcode {
 
