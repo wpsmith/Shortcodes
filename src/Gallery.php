@@ -10,7 +10,7 @@
  *
  * @package    WPS\WP\Shortcodes
  * @author     Travis Smith <t@wpsmith.net>
- * @copyright  2015-2019 Travis Smith
+ * @copyright  2015-2020 Travis Smith
  * @license    http://opensource.org/licenses/gpl-2.0.php GNU Public License v2
  * @link       https://github.com/wpsmith/WPS
  * @version    1.0.0
@@ -18,8 +18,6 @@
  */
 
 namespace WPS\WP\Shortcodes;
-
-use WPS\WP\Shortcodes\Shortcode;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -43,6 +41,16 @@ if ( ! class_exists( 'WPS\WP\Shortcodes\Gallery' ) ) {
 		 * @var string
 		 */
 		public $name = 'gallery';
+
+		/**
+		 * Whether the shortcode is active on the page.
+		 *
+		 * Since no script/style is needed for this shortcode, we optimize performance
+		 * by saying the shortcode is already active.
+		 *
+		 * @var bool
+		 */
+		protected $is_active = true;
 
 		/**
 		 * Gets default attributes.

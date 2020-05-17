@@ -2,9 +2,12 @@
 
 namespace WPS\WP\Shortcodes;
 
-use WPS\WP\Shortcodes\Shortcode;
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-if ( ! class_exists( '\WPS\WP\Shortcodes\SearchForm' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\SearchForm' ) ) {
 	/**
 	 * Class SearchForm
 	 *
@@ -18,6 +21,16 @@ if ( ! class_exists( '\WPS\WP\Shortcodes\SearchForm' ) ) {
 		 * @var string
 		 */
 		public $name = 'search_form';
+
+		/**
+		 * Whether the shortcode is active on the page.
+		 *
+		 * Since no script/style is needed for this shortcode, we optimize performance
+		 * by saying the shortcode is already active.
+		 *
+		 * @var bool
+		 */
+		protected $is_active = true;
 
 		/**
 		 * Performs the shortcode.
