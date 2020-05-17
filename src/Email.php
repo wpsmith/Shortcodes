@@ -2,7 +2,7 @@
 /**
  * The [email] shortcode.
  *
- * Example use: [email email=""]Email Me![/email]
+ * Example use: [email email="" title=""]Email Me![/email]
  *
  * You may copy, distribute and modify the software as long as you track
  * changes/dates in source files. Any modifications to or software including
@@ -78,7 +78,7 @@ if ( ! class_exists( __NAMESPACE__ . '\Email' ) ) {
 			return sprintf(
 				'<a href="mailto:%s" title="%s">%s</a>',
 				antispambot( $atts['email'], 1 ),
-				$atts['title'],
+				esc_attr( $atts['title'] ),
 				antispambot( $content )
 			);
 		}
